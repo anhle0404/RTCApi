@@ -14,30 +14,26 @@ namespace RTCApi.Controllers
     public class DefaultController : ApiController
     {
 
-        //[HttpGet]
-        //[Route("getall")]
-        //public IHttpActionResult GetAll()
-        //{
-        //    try
-        //    {
-        //        List<Users> users = SQLHelper<Users>.SqlToList("SELECT * FROM Users");
-        //        string myConnection = ConfigurationManager.ConnectionStrings["MyConnectionString"].ConnectionString;
-        //        //string defaultConnection = ConfigurationManager.ConnectionStrings["RTCApi.Model.Context.RTCEntities"].ConnectionString;
+        [HttpGet]
+        [Route("getall")]
+        public IHttpActionResult GetAll()
+        {
+            try
+            {
+                List<string> listConnection = new List<string>() { "ư ư","ikuiku" };
 
-        //        List<string> listConnection = new List<string>() { myConnection };
-
-        //        return Ok(new
-        //        {
-        //            status = 1,
-        //            message = "Upload thành công!",
-        //            data = listConnection
-        //        });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
+                return Ok(new
+                {
+                    status = 1,
+                    message = "Upload thành công!",
+                    data = listConnection
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 
 
         [HttpPost]
