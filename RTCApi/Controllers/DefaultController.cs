@@ -41,7 +41,7 @@ namespace RTCApi.Controllers
         {
             try
             {
-                List<string> listConnection = new List<string>() { "ư ư", "ikuiku" };
+                List<string> listConnection = new List<string>() { "ư ư", "ikuiku","hahahahahaah","Khánh đâm lưng" };
 
                 return Ok(new
                 {
