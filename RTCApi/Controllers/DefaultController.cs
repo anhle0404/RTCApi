@@ -35,6 +35,27 @@ namespace RTCApi.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("getbyid")]
+        public IHttpActionResult GetByID(int id)
+        {
+            try
+            {
+                List<string> listConnection = new List<string>() { "ư ư", "ikuiku" };
+
+                return Ok(new
+                {
+                    status = id,
+                    message = "Upload thành công!",
+                    data = listConnection
+                });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
         [HttpPost]
         [Route("uploadfiledemo")]
