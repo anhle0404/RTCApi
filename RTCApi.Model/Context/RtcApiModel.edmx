@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RTCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoginName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="250" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="250" />
+          <Property Name="BirthOfDate" Type="datetime" />
+          <Property Name="Sex" Type="int" />
+          <Property Name="Qualifications" Type="nvarchar" MaxLength="250" />
+          <Property Name="BankAccount" Type="nvarchar" MaxLength="250" />
+          <Property Name="BHYT" Type="nvarchar" MaxLength="250" />
+          <Property Name="MST" Type="nvarchar" MaxLength="250" />
+          <Property Name="BHXH" Type="nvarchar" MaxLength="250" />
+          <Property Name="CMTND" Type="nvarchar" MaxLength="250" />
+          <Property Name="JobDescription" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="100" />
+          <Property Name="HandPhone" Type="nvarchar" MaxLength="100" />
+          <Property Name="HomeAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="Resident" Type="nvarchar" MaxLength="100" />
+          <Property Name="PostalCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="DepartmentID" Type="int" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Communication" Type="nvarchar" MaxLength="100" />
+          <Property Name="PassExpireDate" Type="datetime" />
+          <Property Name="IsCashier" Type="bit" />
+          <Property Name="CashierNo" Type="int" />
+          <Property Name="EmailCom" Type="nvarchar" MaxLength="250" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="StartWorking" Type="datetime" />
+          <Property Name="UserGroupID" Type="int" />
+          <Property Name="UserGroupSXID" Type="int" />
+          <Property Name="MainViewID" Type="int" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsSetupFunction" Type="bit" />
+          <Property Name="ImagePath" Type="ntext" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="20" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="20" />
+          <Property Name="UpdatedDate" Type="datetime" />
+          <Property Name="IsAdmin" Type="bit" />
+          <Property Name="isAdminSale" Type="int" />
+          <Property Name="RoleID" Type="int" />
+          <Property Name="TeamID" Type="int" />
+          <Property Name="Leader" Type="int" />
+        </EntityType>
+        <EntityContainer Name="RTCModelStoreContainer">
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RTCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LoginName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordHash" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BirthOfDate" Type="DateTime" Precision="3" />
+          <Property Name="Sex" Type="Int32" />
+          <Property Name="Qualifications" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BankAccount" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BHYT" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="MST" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BHXH" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="CMTND" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="JobDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HandPhone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HomeAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Resident" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentID" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Communication" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PassExpireDate" Type="DateTime" Precision="3" />
+          <Property Name="IsCashier" Type="Boolean" />
+          <Property Name="CashierNo" Type="Int32" />
+          <Property Name="EmailCom" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="StartWorking" Type="DateTime" Precision="3" />
+          <Property Name="UserGroupID" Type="Int32" />
+          <Property Name="UserGroupSXID" Type="Int32" />
+          <Property Name="MainViewID" Type="Int32" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsSetupFunction" Type="Boolean" />
+          <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsAdmin" Type="Boolean" />
+          <Property Name="isAdminSale" Type="Int32" />
+          <Property Name="RoleID" Type="Int32" />
+          <Property Name="TeamID" Type="Int32" />
+          <Property Name="Leader" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="RTCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RTCModelStoreContainer" CdmEntityContainer="RTCEntities">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="RTCModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="BirthOfDate" ColumnName="BirthOfDate" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Qualifications" ColumnName="Qualifications" />
+                <ScalarProperty Name="BankAccount" ColumnName="BankAccount" />
+                <ScalarProperty Name="BHYT" ColumnName="BHYT" />
+                <ScalarProperty Name="MST" ColumnName="MST" />
+                <ScalarProperty Name="BHXH" ColumnName="BHXH" />
+                <ScalarProperty Name="CMTND" ColumnName="CMTND" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="HandPhone" ColumnName="HandPhone" />
+                <ScalarProperty Name="HomeAddress" ColumnName="HomeAddress" />
+                <ScalarProperty Name="Resident" ColumnName="Resident" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Communication" ColumnName="Communication" />
+                <ScalarProperty Name="PassExpireDate" ColumnName="PassExpireDate" />
+                <ScalarProperty Name="IsCashier" ColumnName="IsCashier" />
+                <ScalarProperty Name="CashierNo" ColumnName="CashierNo" />
+                <ScalarProperty Name="EmailCom" ColumnName="EmailCom" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="StartWorking" ColumnName="StartWorking" />
+                <ScalarProperty Name="UserGroupID" ColumnName="UserGroupID" />
+                <ScalarProperty Name="UserGroupSXID" ColumnName="UserGroupSXID" />
+                <ScalarProperty Name="MainViewID" ColumnName="MainViewID" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="IsSetupFunction" ColumnName="IsSetupFunction" />
+                <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="isAdminSale" ColumnName="isAdminSale" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="Leader" ColumnName="Leader" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
